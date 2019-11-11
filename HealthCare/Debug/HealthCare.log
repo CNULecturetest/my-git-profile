@@ -1,0 +1,6 @@
+﻿  InbodyController.cpp
+  Main.cpp
+  RecordController.cpp
+  Generating Code...
+C:\Users\1031n\Code\Visualstudio\College\OOP\TeamProject\HealthCare\InbodyController.cpp(41,20): warning C4018: '<': signed/unsigned mismatch
+  HealthCare.vcxproj -> C:\Users\1031n\Code\Visualstudio\College\OOP\TeamProject\HealthCare\Debug\HealthCare.exe
