@@ -21,12 +21,6 @@
     <ClCompile Include="Inbody.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="RecordController.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DietController.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="UserInbody.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

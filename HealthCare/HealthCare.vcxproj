@@ -123,10 +123,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="DietController.cpp" />
     <ClCompile Include="Inbody.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="RecordController.cpp" />
     <ClCompile Include="StdInbody.cpp" />
     <ClCompile Include="UserInbody.cpp" />
   </ItemGroup>

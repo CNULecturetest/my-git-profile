@@ -4,4 +4,5 @@ class StdInbody: Inbody {
 public:
 	void getInbodyFromFile(int height);
 	void showStdInbody();
+
 };

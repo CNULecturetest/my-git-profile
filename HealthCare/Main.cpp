@@ -22,19 +22,18 @@ void getInbodyHandler() {
 }
 
 void runInbodyService() { // 인바디 기본 서비스로 입력을 받아서 표준 인바디와의 차이만 출력합니다
-	getInbodyHandler();
-	stdInbody.getInbodyFromFile(userInbody[0].getHeight());
-	stdInbody.showStdInbody();
-	// 메소드시작 UserInbody안에 StdInbody를 받아서 둘의 차이를 출력하는 메소드가 있어야 할 것 같습니다.
 	Sleep(1000);   //1초 딜레이
 	system("cls"); //콘솔화면 지우기
-	cout << "\n*****사용자 인바디와 표준 인바디의 차이 출력*****" << endl;
-	cout << "ㅁㅇㄻㄴㅇㄻㄴㄻㄴㅇㄹ" << endl;
-	cout << "ㅁㅇㄻㄴㅇㄻㄴㄻㄴㅇㄹ" << endl;
-	cout << "ㅁㅇㄻㄴㅇㄻㄴㄻㄴㅇㄹ" << endl;
-	cout << "ㅁㅇㄻㄴㅇㄻㄴㄻㄴㅇㄹ" << endl;
-	cout << "ㅁㅇㄻㄴㅇㄻㄴㄻㄴㅇㄹ" << endl;
-	// 메소드 종료
+
+	cout << "*****인바디 입력*****" << endl;
+	UserInbody newUserInbody;
+	userInbody.push_back(newUserInbody);
+	userInbody[0].getInbodyFromUser();
+	stdInbody.getInbodyFromFile(userInbody[0].getHeight());
+	stdInbody.showStdInbody();
+
+	userInbody[0].showInbodyDiff(stdInbody); // 만약 저장할 필요가 있으면 InbodyDiff 하나 만들어야 될 거 같아요
+
 	cout << "\ninbody 변화를 보고 싶으시면 \"special\", 메뉴로 돌아가시려면 \"home\"을 입력해주세요" << endl;
 	string command;
 	while (1) {

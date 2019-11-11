@@ -1,6 +1,8 @@
 #include "UserInbody.h"
+#include "StdInbody.h"
 
 void UserInbody::getInbodyFromUser() {
+	// Inbody에 있는 더 많은 정보를 받아야 합니다.
 	int inputWeight;
 	int inputHeight;
 	std::cout << "몸무게: ";
@@ -26,3 +28,7 @@ void UserInbody::showUserInbody(std::vector<Inbody> userInbody) {
 		std::cout << "몸무게: " << userInbody[i].getWeight() << std::endl;
 	}
 }
+
+void UserInbody::showInbodyDiff(StdInbody stdInbody) {
+	for(int i=0;)
+};
