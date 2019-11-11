@@ -1,12 +1,6 @@
-﻿  Inbody.cpp
-  Main.cpp
+﻿  Main.cpp
   StdInbody.cpp
   UserInbody.cpp
-C:\Users\1031n\Code\Visualstudio\College\OOP\TeamProject\HealthCare\StdInbody.cpp(5,6): warning C4101: 'temp': unreferenced local variable
-C:\Users\1031n\Code\Visualstudio\College\OOP\TeamProject\HealthCare\UserInbody.h(7,32): error C2061: syntax error: identifier 'StdInbody'
-C:\Users\1031n\Code\Visualstudio\College\OOP\TeamProject\HealthCare\UserInbody.cpp(26,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\1031n\Code\Visualstudio\College\OOP\TeamProject\HealthCare\UserInbody.cpp(32,54): error C2511: 'void UserInbody::showInbodyDiff(StdInbody)': overloaded member function not found in 'UserInbody'
-C:\Users\1031n\Code\Visualstudio\College\OOP\TeamProject\HealthCare\UserInbody.h(3): message : see declaration of 'UserInbody'
-C:\Users\1031n\Code\Visualstudio\College\OOP\TeamProject\HealthCare\UserInbody.cpp(33,14): error C2143: syntax error: missing ';' before ')'
   Generating Code...
-C:\Users\1031n\Code\Visualstudio\College\OOP\TeamProject\HealthCare\UserInbody.cpp(34,1): error C2059: syntax error: '}'
+C:\Users\1031n\Code\Visualstudio\College\OOP\TeamProject\HealthCare\StdInbody.cpp(5,6): warning C4101: 'temp': unreferenced local variable
+  HealthCare.vcxproj -> C:\Users\1031n\Code\Visualstudio\College\OOP\TeamProject\HealthCare\Debug\HealthCare.exe

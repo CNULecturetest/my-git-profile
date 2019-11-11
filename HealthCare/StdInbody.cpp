@@ -20,7 +20,9 @@ void StdInbody::getInbodyFromFile(int height) {
 }
 
 void StdInbody::showStdInbody() {
-	std::cout << "*****표준 인바디 정보*****" << std::endl;
+	Sleep(2000);   //1초 딜레이
+	system("cls"); //콘솔화면 지우기
+	std::cout << "********************표준 인바디 정보********************" << std::endl;
 	std::cout << "사용자의 키와 가장 근접한 인바디 데이터를 출력합니다." << std::endl;
 	std::cout << "키: " << getHeight() << std::endl;
 	std::cout << "몸무게: " << getWeight() << std::endl;

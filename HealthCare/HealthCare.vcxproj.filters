@@ -38,5 +38,17 @@
     <ClInclude Include="StdInbody.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="InbodyResult.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InbodyGraph.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GoalWeight.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Recommandation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
