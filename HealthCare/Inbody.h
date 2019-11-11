@@ -1,6 +1,9 @@
 #pragma once
 #include <vector>
 #include <iostream>
+#include <string>
+#include <fstream>
+#include <windows.h>
 
 class Inbody {
 private:

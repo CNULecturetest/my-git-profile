@@ -21,13 +21,16 @@
     <ClCompile Include="Inbody.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="InbodyController.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="RecordController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DietController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInbody.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdInbody.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,7 +38,10 @@
     <ClInclude Include="Inbody.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="InbodyController.h">
+    <ClInclude Include="UserInbody.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdInbody.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
