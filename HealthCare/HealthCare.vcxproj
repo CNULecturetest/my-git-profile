@@ -131,7 +131,11 @@
     <ClCompile Include="UserInbody.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="GoalWeight.h" />
     <ClInclude Include="Inbody.h" />
+    <ClInclude Include="InbodyGraph.h" />
+    <ClInclude Include="InbodyResult.h" />
+    <ClInclude Include="Recommandation.h" />
     <ClInclude Include="StdInbody.h" />
     <ClInclude Include="UserInbody.h" />
   </ItemGroup>
