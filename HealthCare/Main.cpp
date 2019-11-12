@@ -1,3 +1,8 @@
+/*
+생각해야할 점
+inbody 명령어도 치지 않고 diff 명령어를 치면 오류
+*/
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -45,8 +50,10 @@ void runInbodyDiffService() {
 		cout << "\n계속 입력: 1 그만 입력: 2 " << endl;
 		cout << "$ ";
 		cin >> temp;
-		if (temp == 2)
+		if (temp == 2) {
+			system("cls"); //콘솔화면 지우기
 			break;
+		}
 	}
 	// 결과를 출력하는 메소드 아직 구현 X
 }
