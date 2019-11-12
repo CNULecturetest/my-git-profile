@@ -28,17 +28,8 @@ void UserInbody::getInbodyFromUser() {
 void UserInbody::showUserInbody(std::vector<Inbody> userInbody) {
 	/*
 	사용자의 inbody 정보를 출력하는 메소드입니다.
-	사용자의 inbody는 vector<Inbody>이므로 vector를 순회하며 각각의 inbody 데이터를 출력하는 코드가 필요합니다.
+	필요없을지도 모르겠습니다.
 	*/
-
-	//std::vector<Inbody>::iterator iter;
-	//for (iter = userInbody.begin(); iter != userInbody.end(); ++iter) {
-	//	*iter.
-	//}
-	//for (int i = 0; i < userInbody.size() - 1; i++) {
-	//	std::cout << "*****사용자 인바디 정보*****" << std::endl;
-	//	std::cout << "몸무게: " << userInbody[i].getWeight() << std::endl;
-	//}
 }
 
 void UserInbody::showInbodyDiff(Inbody stdInbody) { // type은 Inbody지만 StdInbody가 들어옵니다 ( 다형성 )
@@ -55,5 +46,13 @@ void UserInbody::showInbodyDiff(Inbody stdInbody) { // type은 Inbody지만 StdInbo
 }
 
 void UserInbody::writeInbodyToFile() {
-	//
+	/*
+	user1대신에 사용자 id나 이름이 들어가면 좋을 거 같아요
+	근데 지금은 여러 회원이 아니라 한명의 사용자를 대상으로 하는거니까
+	*/
+	std::ofstream out("user1_Inbody.txt", std::ios::app);
+	std::string s;
+	if (out.is_open()) {
+		out << " " << getHeight() << " " << getWeight() << " " << getArms() << " " << getBody() << " " << getLegs() << " " << getSsm() << " " << getBfm() << "\n";
+	}
 }

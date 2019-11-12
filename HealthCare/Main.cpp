@@ -9,55 +9,51 @@
 
 using namespace std;
 vector<UserInbody> userInbody;
+int numberOfUserInbodyData = 0;
 StdInbody stdInbody;
 
 void getInbodyHandler(int week) {
 	Sleep(1000);   //1초 딜레이
 	system("cls"); //콘솔화면 지우기
-	if (week == 0)
-		cout << "********************인바디 입력********************" << endl;
-	else
-		cout << "********************" << week << "주차 인바디 입력********************" << endl;
+	cout << "********************인바디 입력********************" << endl;
 	UserInbody newUserInbody;
 	userInbody.push_back(newUserInbody);
+	numberOfUserInbodyData++;
 	userInbody[week].getInbodyFromUser();
+	userInbody[week].writeInbodyToFile();
 }
 
-void runInbodyService() { // 인바디 기본 서비스로 입력을 받아서 표준 인바디와의 차이만 출력합니다
-	getInbodyHandler(0);
-	stdInbody.getInbodyFromFile(userInbody[0].getHeight());
-	stdInbody.showStdInbody();
-	userInbody[0].showInbodyDiff(stdInbody); // 만약 저장할 필요가 있으면 InbodyDiff 하나 만들어야 될 거 같아요
-}
-
-void runInbodyDiffService() {
-	Sleep(1000);
-	system("cls");
-	int numberOfWeeks = 0;
-	cout << "몇 주차의 정보를 가지고 계신가요?\n" << endl;
-	cout << "$ ";
-	cin >> numberOfWeeks;
-	Sleep(1000);
-	system("cls");
-	cout << "********************" << numberOfWeeks << "주의 인바디 정보를 입력하겠습니다.********************" << endl;
-	for(int i=1; i<=numberOfWeeks; i++) {
-		getInbodyHandler(i);
+void runInbodyService() { // 인바디 기본 서비스
+	if (numberOfUserInbodyData > 0) { // 사용자가 이미 인바디를 입력했으면 또 입력할 필요 없이 출력만합니다.
+		stdInbody.showStdInbody();
+		userInbody[0].showInbodyDiff(stdInbody);
+	}
+	else {
+		getInbodyHandler(0); // 인바디 입력받기
+		stdInbody.getInbodyFromFile(userInbody[0].getHeight()); // 사용자 키에 맞는 표준 인바디 가져오기
+		stdInbody.showStdInbody(); // 표준 인바디 출력하기
+		userInbody[0].showInbodyDiff(stdInbody); // 사용자 인바디와 표준 인바디 차이 출력하기
+		// 만약 저장할 필요가 있으면 InbodyDiff 하나 만들어야 될 거 같아요
 	}
 }
 
-void specialInbodyService() { // 인바디 특별 서비스로 n주차 인바디를 반복해서 받은 다음 그래프로 출력하고 ...
-	Sleep(1000);   //1초 딜레이
-	system("cls"); //콘솔화면 지우기
-	cout << "\n*****인바디 입력*****" << endl;
+void runInbodyDiffService() {
+	int week = 1;
+	int temp = 0;
+	while (1) {
+		getInbodyHandler(week++);
+		cout << "\n계속 입력: 1 그만 입력: 2 " << endl;
+		cout << "$ ";
+		cin >> temp;
+		if (temp == 2)
+			break;
+	}
+	// 결과를 출력하는 메소드 아직 구현 X
 }
 
-void runDietService() {
+void runDietService() {}
 
-}
-
-void runRecordService() {
-
-}
+void runRecordService() {}
 
 int main() {
 	cout << "********************Health care program********************" << endl;

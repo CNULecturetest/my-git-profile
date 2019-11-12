@@ -13,26 +13,29 @@ void StdInbody::getInbodyFromFile(int height) {
 		std::cout << "파일을 찾을 수 없습니다." << std::endl;
 	}
 
-	// 파일에서 사용자의 키와 가장 근접한 키를 찾는 코드가 필요합니다.
-	// in >> temp;
-	// if(temp)
+	// 파일에서 사용자의 키를 찾아서 그 행의 데이터를 가져와야합니다.
 
-	// 가장 근접한 키가 있는 행으로 이동했을테니 정보를 받아서 stdInbody에 넣고 리턴합니다.
-	in >> inputWeight;
 	in >> inputHeight;
-	in >> inputSsm;
-	in >> inputBfm;
+	in >> inputWeight;
+	in >> inputArms;
 	in >> inputBody;
 	in >> inputLegs;
-	in >> inputArms;
-	setInbody(inputWeight, inputHeight, inputArms, inputBody, inputLegs, inputSsm, inputBfm);
+	in >> inputSsm;
+	in >> inputBfm;
+
+	setInbody(inputHeight, inputWeight, inputArms, inputBody, inputLegs, inputSsm, inputBfm);
 }
 
 void StdInbody::showStdInbody() {
 	Sleep(2000);   //1초 딜레이
 	system("cls"); //콘솔화면 지우기
 	std::cout << "********************표준 인바디 정보********************" << std::endl;
-	std::cout << "사용자의 키와 가장 근접한 인바디 데이터를 출력합니다." << std::endl;
+	std::cout << "다음은 사용자의 키에 맞는 표준 인바디 데이터입니다." << std::endl;
 	std::cout << "키: " << getHeight() << std::endl;
 	std::cout << "몸무게: " << getWeight() << std::endl;
+	std::cout << "골격근량: " << getSsm() << std::endl;
+	std::cout << "팔근육량: " << getArms() << std::endl;
+	std::cout << "다리근육량: " << getLegs() << std::endl;
+	std::cout << "복부근육량: " << getBody() << std::endl;
+	std::cout << "체지방량: " << getBfm() << std::endl;
 }

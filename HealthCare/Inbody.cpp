@@ -17,7 +17,7 @@ int Inbody::getBody() { return _body; }
 //void Inbody::setSsm(int ssm) { this->_ssm = ssm; }
 //void Inbody::setBody(int body) { this->_body = body; }
 //void Inbody::setBfm(int bfm) { this->_bfm = bfm; }
-void Inbody::setInbody(int weight, int height, int arms, int body, int legs, int ssm, int bfm) {
+void Inbody::setInbody(int height, int weight, int arms, int body, int legs, int ssm, int bfm) {
 	this->_weight = weight;
 	this->_height = height;
 	this->_arms = arms;
@@ -26,7 +26,6 @@ void Inbody::setInbody(int weight, int height, int arms, int body, int legs, int
 	this->_body = body;
 	this->_bfm = bfm;
 }
-
 
 Inbody::Inbody() : _height(0), _weight(0), _arms(0),
 				   _body(0), _legs(0), _ssm(0), _bfm(0) {}
