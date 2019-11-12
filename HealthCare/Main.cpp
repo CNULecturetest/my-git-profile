@@ -52,15 +52,11 @@ void specialInbodyService() { // 인바디 특별 서비스로 n주차 인바디를 반복해서 받
 }
 
 void runDietService() {
-	Sleep(1000);   //1초 딜레이
-	system("cls"); //콘솔화면 지우기
-	cout << "*****아직 구현이 안됐습니다*****" << endl;
+
 }
 
 void runRecordService() {
-	Sleep(1000);   //1초 딜레이
-	system("cls"); //콘솔화면 지우기
-	cout << "*****아직 구현이 안됐습니다*****" << endl;
+
 }
 
 int main() {

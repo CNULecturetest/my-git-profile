@@ -2,8 +2,13 @@
 
 void StdInbody::getInbodyFromFile(int height) {
 	std::ifstream in("inbody.txt");
-	int temp; // 파일에 있는 키를 담을 변수
-	int data; // 파일의 값을 담을 변수
+	int inputWeight;
+	int inputHeight;
+	int inputSsm;
+	int inputBfm;
+	int inputBody;
+	int inputLegs;
+	int inputArms;
 	if (!in.is_open()) {
 		std::cout << "파일을 찾을 수 없습니다." << std::endl;
 	}
@@ -13,10 +18,14 @@ void StdInbody::getInbodyFromFile(int height) {
 	// if(temp)
 
 	// 가장 근접한 키가 있는 행으로 이동했을테니 정보를 받아서 stdInbody에 넣고 리턴합니다.
-	in >> data;
-	setHeight(data);
-	in >> data;
-	setWeight(data);
+	in >> inputWeight;
+	in >> inputHeight;
+	in >> inputSsm;
+	in >> inputBfm;
+	in >> inputBody;
+	in >> inputLegs;
+	in >> inputArms;
+	setInbody(inputWeight, inputHeight, inputArms, inputBody, inputLegs, inputSsm, inputBfm);
 }
 
 void StdInbody::showStdInbody() {

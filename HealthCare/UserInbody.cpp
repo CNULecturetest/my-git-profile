@@ -22,13 +22,7 @@ void UserInbody::getInbodyFromUser() {
 	std::cin >> inputBody;
 	std::cout << "비만율: ";
 	std::cin >> inputBfm;
-	setHeight(inputHeight);
-	setWeight(inputWeight);
-	setSsm(inputSsm);
-	setArms(inputArms);
-	setLegs(inputLegs);
-	setBody(inputBody);
-	setBfm(inputBfm);
+	setInbody(inputHeight, inputWeight, inputArms, inputBody, inputLegs, inputSsm, inputBfm);
 }
 
 void UserInbody::showUserInbody(std::vector<Inbody> userInbody) {
@@ -46,7 +40,6 @@ void UserInbody::showUserInbody(std::vector<Inbody> userInbody) {
 	//	std::cout << "몸무게: " << userInbody[i].getWeight() << std::endl;
 	//}
 }
-
 
 void UserInbody::showInbodyDiff(Inbody stdInbody) { // type은 Inbody지만 StdInbody가 들어옵니다 ( 다형성 )
 	std::cout << "\n********************사용자 인바디와 표준 인바디의 차이********************" << std::endl;
