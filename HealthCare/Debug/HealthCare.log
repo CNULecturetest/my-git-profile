@@ -1,6 +1,4 @@
 ﻿  Main.cpp
-  StdInbody.cpp
   UserInbody.cpp
   Generating Code...
-C:\Users\1031n\Code\Visualstudio\College\OOP\TeamProject\HealthCare\StdInbody.cpp(5,6): warning C4101: 'temp': unreferenced local variable
   HealthCare.vcxproj -> C:\Users\1031n\Code\Visualstudio\College\OOP\TeamProject\HealthCare\Debug\HealthCare.exe

@@ -1,7 +1,6 @@
 #include "UserInbody.h"
 
 void UserInbody::getInbodyFromUser() {
-	// Inbody에 있는 더 많은 정보를 받아야 합니다.
 	int inputWeight;
 	int inputHeight;
 	int inputSsm;
@@ -56,7 +55,7 @@ void UserInbody::showInbodyDiff(Inbody stdInbody) { // type은 Inbody지만 StdInbo
 		stdInbody.getLegs(), stdInbody.getBody(), stdInbody.getBfm());
 	printf("%5s: %5d %15d %15d %15d %15d %15d\n", "사용자", getWeight(), getSsm(), getArms(), getLegs(), getBody(), getBfm());
 	printf("%6s: %5d %15d %15d %15d %15d %15d\n", "차이", 1, 2, 3, 4, 5, 6);
-	std::cout << "아무키나 입력하시면 처음 화면으로 돌아갑니다.\n" << std::endl;
+	std::cout << "\n아무키나 입력하시면 처음 화면으로 돌아갑니다.\n" << std::endl;
 	getchar();
 	getchar();
 	system("cls");
