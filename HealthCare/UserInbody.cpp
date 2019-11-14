@@ -33,17 +33,17 @@ void UserInbody::showUserInbody(std::vector<Inbody> userInbody) {
 }
 
 void UserInbody::showInbodyDiff(Inbody stdInbody) { // type은 Inbody지만 StdInbody가 들어옵니다 ( 다형성 )
-	int diffWeight = stdInbody.getWeight() - getWeight();
-	int diffSsm = stdInbody.getSsm() - getSsm();
-	int diffArms = stdInbody.getArms() - getArms();
-	int diffLegs = stdInbody.getLegs() - getLegs();
-	int diffBody = stdInbody.getBody() - getBody();
-	int diffBfm = stdInbody.getBfm() - getBfm();
+	int diffWeight = getWeight()- stdInbody.getWeight();
+	int diffSsm = getSsm()- stdInbody.getSsm();
+	int diffArms = getArms()-stdInbody.getArms();
+	int diffLegs = getLegs()-stdInbody.getLegs();
+	int diffBody = getBody()- stdInbody.getBody();
+	int diffBfm = getBfm()- stdInbody.getBfm();
 	std::cout << "\n********************사용자 인바디와 표준 인바디의 차이********************" << std::endl;
-	printf("%6s %8s %17s %15s %15s %15s %13s\n", "", "몸무게", "골격근량", "팔근육량", "다리근육량", "복부근육량", "체지방량");
+	printf("%6s %8s %17s %15s %15s %15s %13s\n", "", "몸무게", "골격근량", "팔근육량", "다리근육량", "복부근육량", "비만율");
+	printf("%5s: %5d %15d %15d %15d %15d %15d\n", "사용자", getWeight(), getSsm(), getArms(), getLegs(), getBody(), getBfm());
 	printf("%6s: %5d %15d %15d %15d %15d %15d\n", "표준", stdInbody.getWeight(), stdInbody.getSsm(), stdInbody.getArms(),
 		stdInbody.getLegs(), stdInbody.getBody(), stdInbody.getBfm());
-	printf("%5s: %5d %15d %15d %15d %15d %15d\n", "사용자", getWeight(), getSsm(), getArms(), getLegs(), getBody(), getBfm());
 	printf("%6s: %5d %15d %15d %15d %15d %15d\n", "차이", diffWeight, diffSsm, diffArms, diffLegs, diffBody, diffBfm);
 	std::cout << "\n아무키나 입력하시면 처음 화면으로 돌아갑니다.\n" << std::endl;
 	getchar();

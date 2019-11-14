@@ -1,29 +1,56 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include "StdInbody.h"
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+using namespace std;
 
 void StdInbody::getInbodyFromFile(int height) {
-	std::ifstream in("inbody.txt");
-	int inputWeight;
-	int inputHeight;
-	int inputSsm;
-	int inputBfm;
-	int inputBody;
-	int inputLegs;
-	int inputArms;
-	if (!in.is_open()) {
-		std::cout << "파일을 찾을 수 없습니다." << std::endl;
+	int stdInbody[7];
+	//stdInbody[0]:height
+	//stdInbody[1]:weight
+	//stdInbody[2]:ssm
+	//stdInbody[3]:arms
+	//stdInbody[4]:legs
+	//stdInbody[5]:body
+	//stdInbody[6]:bfm
+	FILE* f = fopen("ManInbody.txt", "r");
+	char line[256];
+
+	if (f == NULL) {
+		cout<<"파일이 열리지 않습니다."<<endl;
+		exit(1);
 	}
+	
+	char delimit[] = "\t \n-";
+	char* token = NULL;
+	int i=0;
+	int FLAG = 0;
+	while (!feof(f)) {
+		i = 0;
+		fgets(line, sizeof(line), f);
+		token = strtok(line, delimit);//공백까지 끊어서 읽기
+		int fileheight = atoi(token);
+		if (fileheight == height) {
+			FLAG = 1;
+			//token = strtok(NULL, delimit);//다음 단어
+			while (token != NULL) {//현재라인의 모든 단어 읽기
+				int inbody = atoi(token);
+				stdInbody[i] = inbody;
+				token = strtok(NULL, delimit);//다음 단어
+				i++;
+			}
+		}
+	}
+	if (FLAG == 0) {
+		cout << "파일에서 정보를 찾는데 실패했습니다. " << endl;
+	}
+	fclose(f);//파일 닫기
 
 	// 파일에서 사용자의 키를 찾아서 그 행의 데이터를 가져와야합니다.
 
-	in >> inputHeight;
-	in >> inputWeight;
-	in >> inputArms;
-	in >> inputBody;
-	in >> inputLegs;
-	in >> inputSsm;
-	in >> inputBfm;
-
-	setInbody(inputHeight, inputWeight, inputArms, inputBody, inputLegs, inputSsm, inputBfm);
+	setInbody(stdInbody[0], stdInbody[1], stdInbody[2], stdInbody[3], stdInbody[4], stdInbody[5], stdInbody[6]);
 }
 
 void StdInbody::showStdInbody() {
