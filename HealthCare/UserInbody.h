@@ -3,7 +3,7 @@
 class UserInbody : public Inbody {
 public:
 	void getInbodyFromUser();
-	void showUserInbody(std::vector<Inbody> userInbody);
+	void showUserInbody(int targetWeek);
 	void showInbodyDiff(Inbody stdInbody);
 	void writeInbodyToFile();
 };

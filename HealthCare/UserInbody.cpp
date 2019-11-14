@@ -25,11 +25,15 @@ void UserInbody::getInbodyFromUser() {
 	setInbody(inputHeight, inputWeight, inputArms, inputBody, inputLegs, inputSsm, inputBfm);
 }
 
-void UserInbody::showUserInbody(std::vector<Inbody> userInbody) {
-	/*
-	사용자의 inbody 정보를 출력하는 메소드입니다.
-	필요없을지도 모르겠습니다.
-	*/
+void UserInbody::showUserInbody(int targetWeek) {
+	std::cout << "\n********************사용자의 " << targetWeek << "주차 인바디 정보********************" << std::endl;
+	std::cout << "키: " << getHeight() << std::endl;
+	std::cout << "몸무게: " << getWeight() << std::endl;
+	std::cout << "골격근량: " << getSsm() << std::endl;
+	std::cout << "팔근육량: " << getArms() << std::endl;
+	std::cout << "다리근육량: " << getLegs() << std::endl;
+	std::cout << "복부근육량: " << getBody() << std::endl;
+	std::cout << "체지방량: " << getBfm() << std::endl;
 }
 
 void UserInbody::showInbodyDiff(Inbody stdInbody) { // type은 Inbody지만 StdInbody가 들어옵니다 ( 다형성 )
@@ -48,7 +52,6 @@ void UserInbody::showInbodyDiff(Inbody stdInbody) { // type은 Inbody지만 StdInbo
 	std::cout << "\n아무키나 입력하시면 처음 화면으로 돌아갑니다.\n" << std::endl;
 	getchar();
 	getchar();
-	system("cls");
 }
 
 void UserInbody::writeInbodyToFile() {

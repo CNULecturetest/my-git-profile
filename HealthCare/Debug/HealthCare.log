@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-﻿  UserInbody.cpp
+﻿  Main.cpp
+  StdInbody.cpp
+  Generating Code...
   HealthCare.vcxproj -> C:\Users\1031n\Code\Visualstudio\College\OOP\TeamProject\HealthCare\Debug\HealthCare.exe
-=======
-﻿  StdInbody.cpp
-  HealthCare.vcxproj -> C:\Users\김혜진\source\repos\OOP_teamp\HealthCare\Debug\HealthCare.exe
->>>>>>> dddcd281b0a33449efefad6ac46e98d03c0d8030

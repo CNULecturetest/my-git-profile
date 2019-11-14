@@ -6,7 +6,8 @@
 
 using namespace std;
 
-void StdInbody::getInbodyFromFile(int height) {
+// 이제보니 C 코드 같은데 괜찮을까요?
+int StdInbody::getInbodyFromFile(int height) {
 	int stdInbody[7];
 	//stdInbody[0]:height
 	//stdInbody[1]:weight
@@ -44,18 +45,22 @@ void StdInbody::getInbodyFromFile(int height) {
 		}
 	}
 	if (FLAG == 0) {
-		cout << "파일에서 정보를 찾는데 실패했습니다. " << endl;
+		cout << "\n죄송합니다. 해당하는 키의 표준 inbody 정보가 없습니다. " << endl;
+		Sleep(2000);
+		fclose(f);
+		return -1;
 	}
 	fclose(f);//파일 닫기
 
 	// 파일에서 사용자의 키를 찾아서 그 행의 데이터를 가져와야합니다.
 
 	setInbody(stdInbody[0], stdInbody[1], stdInbody[2], stdInbody[3], stdInbody[4], stdInbody[5], stdInbody[6]);
+	return 1;
 }
 
 void StdInbody::showStdInbody() {
-	Sleep(2000);   //1초 딜레이
-	system("cls"); //콘솔화면 지우기
+	Sleep(1000);
+	system("cls");
 	std::cout << "********************표준 인바디 정보********************" << std::endl;
 	std::cout << "다음은 사용자의 키에 맞는 표준 인바디 데이터입니다." << std::endl;
 	std::cout << "키: " << getHeight() << std::endl;
