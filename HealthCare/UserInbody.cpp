@@ -20,7 +20,7 @@ void UserInbody::getInbodyFromUser() {
 	std::cin >> inputLegs;
 	std::cout << "복부근육량: ";
 	std::cin >> inputBody;
-	std::cout << "비만율: ";
+	std::cout << "체지방량: ";
 	std::cin >> inputBfm;
 	setInbody(inputHeight, inputWeight, inputArms, inputBody, inputLegs, inputSsm, inputBfm);
 }
@@ -40,7 +40,7 @@ void UserInbody::showInbodyDiff(Inbody stdInbody) { // type은 Inbody지만 StdInbo
 	int diffBody = stdInbody.getBody() - getBody();
 	int diffBfm = stdInbody.getBfm() - getBfm();
 	std::cout << "\n********************사용자 인바디와 표준 인바디의 차이********************" << std::endl;
-	printf("%6s %8s %17s %15s %15s %15s %13s\n", "", "몸무게", "골격근량", "팔근육량", "다리근육량", "복부근육량", "비만율");
+	printf("%6s %8s %17s %15s %15s %15s %13s\n", "", "몸무게", "골격근량", "팔근육량", "다리근육량", "복부근육량", "체지방량");
 	printf("%6s: %5d %15d %15d %15d %15d %15d\n", "표준", stdInbody.getWeight(), stdInbody.getSsm(), stdInbody.getArms(),
 		stdInbody.getLegs(), stdInbody.getBody(), stdInbody.getBfm());
 	printf("%5s: %5d %15d %15d %15d %15d %15d\n", "사용자", getWeight(), getSsm(), getArms(), getLegs(), getBody(), getBfm());
@@ -59,6 +59,6 @@ void UserInbody::writeInbodyToFile() {
 	std::ofstream out("user1_Inbody.txt", std::ios::app);
 	std::string s;
 	if (out.is_open()) {
-		out << " " << getHeight() << " " << getWeight() << " " << getArms() << " " << getBody() << " " << getLegs() << " " << getSsm() << " " << getBfm() << "\n";
+		out << " " << getHeight() << " " << getWeight() << " " << getSsm() << " " << getArms() << " " << getLegs() << " " << getBody() << " " << getBfm() << "\n";
 	}
 }
