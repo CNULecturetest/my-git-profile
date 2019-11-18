@@ -1,3 +1,5 @@
+// °­µ¿ÈÆ
+
 #define _CRT_SECURE_NO_WARNINGS
 #include "StdInbody.h"
 #include <stdlib.h>
